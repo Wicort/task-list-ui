@@ -10,9 +10,9 @@ import CategoriesService from "../api/CategoriesService"
 const UserCategories = () => {
     const [categories, setCategories] = useState([]);
 
-    const [fetchCategories, isLoadingCategories, errorCategories] = useFetching(() => {
-        const cat = CategoriesService.getUserCategories();
-        setCategories([...cat]);
+    const [fetchCategories, isLoadingCategories, errorCategories] = useFetching(async () => {
+        const cat = await CategoriesService.getAll('d0754e6e-97c1-4ce0-a9be-3205b278c57a');
+        setCategories([...cat.data]);
     });
 
     useEffect(() => {

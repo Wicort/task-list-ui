@@ -22,7 +22,7 @@ const Header = () => {
                 <Toolbar>
                     {auth && <CategoriesDrawer/>}
                     <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-                        Task List
+                        Task List - Планирование задач
                     </Typography>
                     <UserMenu
                         auth={auth}
