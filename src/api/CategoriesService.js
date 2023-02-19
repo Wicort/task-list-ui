@@ -10,7 +10,7 @@ export default class CategoriesService {
     }
 
     static async getAll(userId){
-        const response = await axios.get(API_LINK + Links.CATEGORIES + "/" + userId);
+        const response = await axios.get(Links.CATEGORIES + "/user/" + userId);
         console.log(response);
         return response;
     }
